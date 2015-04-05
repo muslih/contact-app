@@ -1,10 +1,10 @@
 var express 	= require('express'),
-    api		= require('./api'),
+    // api		= require('./api'),
     app		= express();
 
 app
    .use(express.static('./public'))
-   .use('./api',api)
+   // .use('./api',api)
    .get('*', function(req, res){
    	res.sendfile('public/main.html');
    })
